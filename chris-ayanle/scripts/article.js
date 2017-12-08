@@ -45,5 +45,5 @@ rawData.forEach(articleObject => {
 });
 
 articles.forEach(article => {
-  $('#blog').append(article.toHtml());
+  $('#articles').append(article.toHtml());
 });
