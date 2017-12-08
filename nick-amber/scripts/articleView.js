@@ -26,7 +26,7 @@ articleView.populateFilters = () => {
   });
 };
 
-  articleView.handleAuthorFilter = () => {
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
