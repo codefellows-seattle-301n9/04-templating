@@ -5,10 +5,9 @@ let articleView = {};
 // TODO?: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// arrow functions do not create a 'this' so functions that need a 'this' cannot be refactored into arrow functions.
 
-//articleView.populateFilters = function() {
-let populateFilters = () => {
+articleView.populateFilters = () => {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
@@ -26,10 +25,8 @@ let populateFilters = () => {
     }
   });
 };
-articleView.populateFilters = populateFilters;
 
-//articleView.handleAuthorFilter = function() {
-let handleAuthorFilter = () => {
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -41,10 +38,8 @@ let handleAuthorFilter = () => {
     $('#category-filter').val('');
   });
 };
-articleView.handleAuthorFilter = handleAuthorFilter;
 
-//articleView.handleCategoryFilter = function() {
-let handleCategoryFilter = () => {
+articleView.handleCategoryFilter = () => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -56,10 +51,8 @@ let handleCategoryFilter = () => {
     $('#author-filter').val('');
   });
 };
-articleView.handleCategoryFilter = handleCategoryFilter;
 
-//articleView.handleMainNav = function() {
-let handleMainNav = () => {
+articleView.handleMainNav = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
@@ -67,10 +60,8 @@ let handleMainNav = () => {
 
   $('.main-nav .tab:first').click();
 };
-articleView.handleMainNav = handleMainNav;
 
-//articleView.setTeasers = function() {
-let setTeasers = () => {
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
@@ -86,7 +77,6 @@ let setTeasers = () => {
     }
   });
 };
-articleView.setTeasers = setTeasers;
 
 $(document).ready(() => {
   articleView.populateFilters();
