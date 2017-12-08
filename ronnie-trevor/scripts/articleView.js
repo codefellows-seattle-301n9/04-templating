@@ -5,7 +5,7 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// Arrows can't be used as method functions or be used as a constructor. 
+// Arrows can't be used as method functions or be used as a constructor.
 
 articleView.populateFilters = () => {
   $('article').each(function() {
@@ -61,7 +61,7 @@ articleView.handleMainNav = () =>  {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
