@@ -18,9 +18,9 @@ We've used Handlebars and jQuery to building a very simple single-page applicati
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
-12-07-2017 6:00pm - forked [Codefellows 04-templating assignment](https://github.com/codefellows-seattle-301n9/04-templating)
-12-07-2017 6:20pm - created 2 branches to work side-by-side
-12-07-2017 8:00pm - completed assignment
+⋅⋅* 12-07-2017 6:00pm - forked [Codefellows 04-templating assignment](https://github.com/codefellows-seattle-301n9/04-templating)
+⋅⋅* 12-07-2017 6:20pm - created 2 branches to work side-by-side
+⋅⋅* 12-07-2017 8:00pm - completed assignment
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.-->
