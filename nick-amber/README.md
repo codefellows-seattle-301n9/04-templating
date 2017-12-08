@@ -1,23 +1,21 @@
-# Project Name
+# Lab 04 HTML Templating w/HandlebarsJS
 
-**Author**: Your Name Goes Here
+**Author**: Nick Damberg and Amber Kim
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+A Refactoring of our previous lab using Handlebar.js and ES6 Arrow Functions.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+To Use this repo, fork, clone and create a copy of the starter-code or nick-amber folder and edit for your own practice.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+This project utilizes HTML, CSS, JavaScript, Handlebars, Templating, ES6 Arrow Functions.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+12-07-2017 6:54pm - Application and minimum requirements are now working.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
+* jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license
+* normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css
+* handlebars v4.0.11 Copyright (C) 2011-2017 by Yehuda Katz
