@@ -26,7 +26,7 @@ articleView.populateFilters = function() {
   });
 };
 
-articleView.handleAuthorFilter = function() {
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -39,7 +39,7 @@ articleView.handleAuthorFilter = function() {
   });
 };
 
-articleView.handleCategoryFilter = function() {
+articleView.handleCategoryFilter = () => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -52,7 +52,7 @@ articleView.handleCategoryFilter = function() {
   });
 };
 
-articleView.handleMainNav = function() {
+articleView.handleMainNav = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
