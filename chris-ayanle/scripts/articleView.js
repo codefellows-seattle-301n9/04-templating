@@ -63,6 +63,7 @@ articleView.handleMainNav = () => {
 
 articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
+  $('.article-body img').hide();
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
     if ($(this).text() === 'Read on →') {
@@ -74,6 +75,7 @@ articleView.setTeasers = () => {
       },200);
       $(this).html('Read on &rarr;');
       $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+      $(this).parent().find('.article-body img').hide();
     }
   });
 };
