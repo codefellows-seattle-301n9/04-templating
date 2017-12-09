@@ -11,7 +11,16 @@ function Article (rawDataObj) {
   this.publishedOn = rawDataObj.publishedOn;
 }
 
+console.log()
 Article.prototype.toHtml = function() {
+
+  var templateScript = $('#blog-template').html();
+
+  var templateComplie = Handelbars.compile(templateScript);
+  
+ articles.forEach(article => {
+   article.templateComplie();
+ });
   // TODO: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
 
   // REVIEW: If your template will use properties that aren't on the object yet, add them.

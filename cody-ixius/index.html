@@ -10,9 +10,25 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+    
     <script id="blog-template" type="text/x-handlebars-template">
+
+      <article class="template" data-category={{this.category}}>
+      <header>
+      <h1>{{this.title}}</h1>
+    <div class = "byline">
+        By <address><a href={{this.authorUrl}}>{{this.author}}</a></address>
+        published <time pubdate datetime="2000-01-01">{{this.publishedOn}}</time>
+      </div>
+    </header>
+    <section class="article-body">{{this.body}}</section>
+    <a href="#" class="read-on">Read on &rarr;</a>
+  </article>
       
+    
+    </div>  
     </script>
+    
     <!--
       TODO: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
