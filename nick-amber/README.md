@@ -16,6 +16,7 @@ This project utilizes HTML, CSS, JavaScript, Handlebars, Templating, ES6 Arrow F
 12-07-2017 6:54pm - Application and minimum requirements are now working.
 
 ## Credits and Collaborations
+* icomoon icons | © 2017 Roonas. All Rights Reserved. | icomoon.io/#icons-icomoon
 * jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license
 * normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css
 * handlebars v4.0.11 Copyright (C) 2011-2017 by Yehuda Katz
