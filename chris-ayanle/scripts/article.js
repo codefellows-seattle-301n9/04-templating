@@ -32,6 +32,19 @@ Article.prototype.toHtml = function() {
   return templateRender(this);
 };
 
+// The following two functions will use Handlebar templates to render author/category filters to the DOM
+let authorFilterHtml = function() {
+  let templateAuthorFilter = $('#author-filter-template').html();
+  let templateRenderAuthor = Handlebars.compile(templateAuthorFilter);
+  return templateRenderAuthor();
+};
+
+let categoryFilterHtml = function() {
+  let templateCategoryFilter = $('#category-filter-template').html();
+  let templateRenderCategory = Handlebars.compile(templateCategoryFilter);
+  return templateRenderCategory();
+};
+
 // COMMENTED: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
 
 // Parentheses are required around 'a' and 'b' because the .sort() method compares both/multiple values with each iteration. No parentheses ar required around the .forEach() method arguments because there is only one and arrow function is being used.
@@ -45,5 +58,9 @@ rawData.forEach(articleObject => {
 });
 
 articles.forEach(article => {
-  $('#blog').append(article.toHtml());
+  $('#articles').append(article.toHtml());
 });
+
+// With prepend() method, insert category filter first, then author filter
+$('#articles #filters').append(authorFilterHtml());
+$('#articles #filters').append(categoryFilterHtml());

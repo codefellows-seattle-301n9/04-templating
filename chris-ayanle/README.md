@@ -1,7 +1,7 @@
-# Lsb 04 - Templating
+# Lab 04 - Templating
 
 **Author**: Chris Lesesne and Ayanle Abdi
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 1.0.1 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 We're building a small blog using Handlebars and jQuery

@@ -1,3 +1,8 @@
+.draft {
+  border-bottom: 1px solid lightslategray;
+  margin-bottom: 1em;
+}
+
 .pull-left {
   float: left;
 }
@@ -8,7 +13,7 @@
 
 .clearfix::after {
   content: "";
-  display: table;
+  /* display: table; */
   clear: both;
 }
 
@@ -32,8 +37,12 @@
     margin: .2em .2em;
   }
 
+  #filters ul {
+    display: inline;
+  }
+
   #filters li {
-    width: 20em;
+    /* width: 20em; */
     display: inline;
   }
 }
