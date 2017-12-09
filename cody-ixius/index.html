@@ -10,10 +10,27 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+<!--     
+    <script id="filtersList" type="text/x-handlebars-template">
+      <div>
+          <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value="">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+    </script> -->
     
     <script id="blog-template" type="text/x-handlebars-template">
-      
-      <article  data-category={{this.category}}   >
+   
+      <article  data-category="{{this.category}}"  data-author="{{this.author}}"   >
       <header>
       <h1>{{this.title}}</h1>
     <div class = "byline">
@@ -24,8 +41,6 @@
     <section class="article-body">{{{this.body}}}</section>
     <a href="#" class="read-on">Read on &rarr;</a>
   </article>
-      
-    
     </div>  
     </script>
     

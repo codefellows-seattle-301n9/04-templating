@@ -19,8 +19,13 @@ Article.prototype.toHtml = function() {
 
   let templateCompile = Handlebars.compile(templateScript);
   return templateCompile(this);
-//  articles.forEach(article => {
-//    article.templateCompile();
+
+
+  // let filterScript = $('#filtersList').html();
+
+  // let filterCompile = Handlebars.compile(filterScript);
+  // return filterCompile(this);
+
 };
 
 // REVIEW: If your template will use properties that aren't on the object yet, add them.
@@ -44,7 +49,8 @@ this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '
 
 
 // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
-// PUT YOUR RESPONSE HERE
+// because we are passing two arguments so you have to have the parentheses
+
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
