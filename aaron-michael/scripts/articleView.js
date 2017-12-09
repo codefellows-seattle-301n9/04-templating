@@ -3,32 +3,13 @@
 let articleView = {};
 
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
-
+//function expression is not working on its own so we didn't refactor.
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // Arrow functions cannot be substituted for constructor functions and are best suited for non-method functions.
-// articleView.populateFilters( {
-//   get: () => {
-//     $('article').each(function() {
-//       if (!$(this).hasClass('template')) {
-//         let val = $(this).find('address a').text();
-//         let optionTag = `<option value="${val}">${val}</option>`;
-  
-//         if ($(`#author-filter option[value="${val}"]`).length === 0) {
-//           $('#author-filter').append(optionTag);
-//         }
-  
-//         val = $(this).attr('data-category');
-//         optionTag = `<option value="${val}">${val}</option>`;
-//         if ($(`#category-filter option[value="${val}"]`).length === 0) {
-//           $('#category-filter').append(optionTag);
-//         }
-//       }
-//     });
-//   }
-// })
 console.log('help');
 articleView.populateFilters = function() {
   $('article').each(function() {
+    console.log('jeff');
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
