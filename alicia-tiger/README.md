@@ -4,18 +4,23 @@
 **Version**: 1.0.0 
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+To create a way to filter articles and categories using the Handlebars.js libary.  
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Make a copy of starter code and rename it.
+2. Next, open the HTML file and add scripts.
+3. Next, open .js files and complete TODO and response items.
+4. Then we open app in browser and confirm responsiveness to see if code is functional.
+5. Lastly, upload final edits to GitHub.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+This application uses basic HTML, CSS, JavaScript, DOM manipulation, JQuery, ES6, and Handlebars.js
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+12-9-2017 12:30pm - Imported Handlebars.js files, and used Handlebars to render articles using new template.
+12-9-2017 1:20pm - Refactor functions and methods to use ES6 arrow functions when possible. 
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+12-9-2017 2:00pm - Application now has a fully-functional responsive design.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+This application was pair programmed by Alicia Lycan and Tiger Hsu.
