@@ -1,8 +1,8 @@
 #### Single-line Summary
-**Today, _ and _ paired together. It took about _**
+**Today, Eric and Dennis paired together. It took about _ hours**
 
 #### Reflect and summarize on your process for each `TODO` item :  
-  1. First, we started on ...
+  1. First, we started with the HTML and replaced all of the script tags ...
   2. Next, we ...
   3. 
 
