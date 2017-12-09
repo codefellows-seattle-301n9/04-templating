@@ -1,4 +1,4 @@
-# Lsb 04 - Templating
+# Lab 04 - Templating
 
 **Author**: Chris Lesesne and Ayanle Abdi
 **Version**: 1.0.1 (increment the patch/fix version number up if you make more commits past your first submission)
