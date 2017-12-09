@@ -18,24 +18,12 @@
         - Insert placeholder keys.
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
-    <script id="author-filter-template" type="text/x-handlebars-template">
-      <ul>
-          <li>
-            <select id="author-filter">
-              <option value="">-- Filter by Authors --</option>
-            </select>
-          </li>
-      </ul>
-    </script>
-
-    <script id="category-filter-template" type="text/x-handlebars-template">
-      <ul>
-        <li>
-          <select id="category-filter">
-            <option value="">-- Filter by Categories --</option>
-          </select>
-        </li>
-      </ul>
+    <script id="filter-template" type="text/x-handlebars-template">
+      <li>
+        <select id="{{type}}-filter">
+          <option value="">-- Filter by {{filterName}} --</option>
+        </select>
+      </li>
     </script>
 
     <script id="articles-template" type="text/x-handlebars-template">
@@ -73,7 +61,8 @@
     </header>
     <main>
       <section id="articles" class="tab-content clearfix">
-        <div id="filters">
+        <div>
+          <ul id="filters"></ul>
         </div>
       </section>
       <section id="about" class="tab-content">
