@@ -2,20 +2,17 @@
 
 let articleView = {};
 
-// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
+// DONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 //function expression is not working on its own so we didn't refactor.
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // Arrow functions cannot be substituted for constructor functions and are best suited for non-method functions.
-console.log('help');
-articleView.populateFilters = function() {
+articleView.populateFilters = () => {
   $('article').each(function() {
-    console.log('jeff');
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
 
       if ($(`#author-filter option[value="${val}"]`).length === 0) {
-        console.log('iohoioiihowda');
         $('#author-filter').append(optionTag);
       }
 
@@ -26,9 +23,8 @@ articleView.populateFilters = function() {
       }
     }
   });
-};
-console.log('ded');
-articleView.handleAuthorFilter = function() {
+}
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -38,10 +34,9 @@ articleView.handleAuthorFilter = function() {
       $('article.template').hide();
     }
     $('#category-filter').val('');
-  });
-};
-
-articleView.handleCategoryFilter = function() {
+  });  
+}
+articleView.handleCategoryFilter = () => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -52,18 +47,16 @@ articleView.handleCategoryFilter = function() {
     }
     $('#author-filter').val('');
   });
-};
-
-articleView.handleMainNav = function() {
+}
+articleView.handleMainNav = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
   });
 
   $('.main-nav .tab:first').click();
-};
-
-articleView.setTeasers = function() {
+}
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
@@ -78,12 +71,11 @@ articleView.setTeasers = function() {
       $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
     }
   });
-};
-
-$(document).ready(function() {
+}
+$(document).ready(() => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
-})
+});
