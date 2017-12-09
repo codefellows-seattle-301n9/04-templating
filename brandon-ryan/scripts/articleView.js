@@ -29,9 +29,13 @@ articleView.populateFilters = () => {
 
 articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
+    console.log($(this).val());
     if ($(this).val()) {
+      console.log('hi there');
       $('article').hide();
+      console.log(`article[data-author="${$(this).val()}"]`);
       $(`article[data-author="${$(this).val()}"]`).fadeIn();
+      console.log($('article[data-author="Kevin Bacon"]'));
     } else {
       $('article').fadeIn();
       $('article.template').hide();
