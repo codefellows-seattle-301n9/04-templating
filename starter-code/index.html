@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Lab 4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="vendor/styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -18,8 +18,8 @@
         - *Insert placeholder keys.
         - *If your object doesn't have values you need yet, you can add those properties in the model.
     -->
-    <script id="rawData-template" type="text/x-handlebars-template">      
-     <article class="template hidden" data-category="cat">
+    <script id="blogArticles-template" type="text/x-handlebars-template">      
+     <article data-category="cat">
          <header>
            <h1>{{Title}}</h1>
            <div class="byline">
@@ -87,10 +87,13 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- TODO: Include Handlebars.JS from a CDN -->
-
-    <script src="scripts/blogArticles.js"type="text/x-handlebars-template"></script>
-    <script src="scripts/article.js"type="text/x-handlebars-template"></script>
-    <script src="scripts/articleView.js"type="text/x-handlebars-template"></script>
+    <!-- TODONE: Include Handlebars.JS from a CDN -->
+    <script> src="https://cdn.jsdelivr.net/npm/handlebars@4.0.11/lib/index.min.js"
+    </script>
+      
+    
+    <script src="scripts/blogArticles.js"></script></stript>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/articleView.js"></script>
   </body>
 </html>
