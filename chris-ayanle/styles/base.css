@@ -17,6 +17,12 @@ hr {
   width: 80%;
 }
 
+footer {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 /*TEXT STYLES
 =======================================*/
 p {
