@@ -13,6 +13,7 @@ function Article (rawDataObj) {
 
 
 Article.prototype.toHtml = function() {
+  // TODONE: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
 
   let templateScript = $('#blog-template').html();
 
@@ -20,9 +21,7 @@ Article.prototype.toHtml = function() {
   return templateCompile(this);
 //  articles.forEach(article => {
 //    article.templateCompile();
- 
 };
-// TODO: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
 
 // REVIEW: If your template will use properties that aren't on the object yet, add them.
 // Since your template can't hold any JS logic, we need to execute the logic here.
@@ -40,7 +39,7 @@ this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '
 //   this.publishStatus = '(draft)';
 // }
 
-// TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
+// TODONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
 
 
 
