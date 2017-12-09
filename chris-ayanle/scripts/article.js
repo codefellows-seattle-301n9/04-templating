@@ -1,6 +1,37 @@
 'use strict';
 
 let articles = [];
+let filters = [];
+
+let dataObjArr = [
+  {
+    type: 'author',
+    filterName: 'Authors'
+  },
+  {
+    type: 'category',
+    filterName: 'Categories'}
+];
+
+function Filter (dataObj) {
+  for (let key in dataObj) {
+    this[key] = dataObj[key];
+  }
+}
+
+Filter.prototype.toPage = function() {
+  let template = $('#filter-template').html();
+  let templateRender = Handlebars.compile(template);
+  return templateRender(this);
+};
+
+dataObjArr.forEach(function(filterObject) {
+  filters.push(new Filter(filterObject));
+});
+
+filters.forEach(function(filter) {
+  $('#filters').append(filter.toPage());
+});
 
 function Article (rawDataObj) {
   for (let key in rawDataObj) {
@@ -32,19 +63,6 @@ Article.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-// The following two functions will use Handlebar templates to render author/category filters to the DOM
-let authorFilterHtml = function() {
-  let templateAuthorFilter = $('#author-filter-template').html();
-  let templateRenderAuthor = Handlebars.compile(templateAuthorFilter);
-  return templateRenderAuthor();
-};
-
-let categoryFilterHtml = function() {
-  let templateCategoryFilter = $('#category-filter-template').html();
-  let templateRenderCategory = Handlebars.compile(templateCategoryFilter);
-  return templateRenderCategory();
-};
-
 // COMMENTED: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
 
 // Parentheses are required around 'a' and 'b' because the .sort() method compares both/multiple values with each iteration. No parentheses ar required around the .forEach() method arguments because there is only one and arrow function is being used.
@@ -60,7 +78,3 @@ rawData.forEach(articleObject => {
 articles.forEach(article => {
   $('#articles').append(article.toHtml());
 });
-
-// With prepend() method, insert category filter first, then author filter
-$('#articles #filters').append(authorFilterHtml());
-$('#articles #filters').append(categoryFilterHtml());
