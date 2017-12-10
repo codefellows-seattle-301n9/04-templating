@@ -31,7 +31,6 @@ Article.prototype.toHtml = function() {
   // } else {
   //   this.publishStatus = '(draft)';
   // }
-  console.log(templateRender)
   // TODONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
   return templateRender(this);
   
