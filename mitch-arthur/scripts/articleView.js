@@ -12,7 +12,7 @@ articleView.populateFilters = function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
-
+      val = $(this).attr('data-author');
       if ($(`#author-filter option[value="${val}"]`).length === 0) {
         $('#author-filter').append(optionTag);
       }
@@ -80,8 +80,8 @@ articleView.setTeasers = function() {
 
 $(document).ready(function() {
   articleView.populateFilters();
-  articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
+  articleView.handleCategoryFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
-})
+});
