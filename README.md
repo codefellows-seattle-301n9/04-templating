@@ -72,20 +72,35 @@ _Your README.md must include:_
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+Templating - The Goal is to use templates or create reusable templates. Subtasks in the goal were making sure the user defined input (selecting author/category) actually worked/filtered correctly and rendered
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Add script tags to hold handlebar template data - make sure data tags were relevant
+2. Make sure placeholder keys, matched script tag names
+3. Create and link a "working" handlebars script 
+4. Refactor all of the filters to make the code drier
+
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+1. Using cdn version of handlebars.js (4.0)
+2. Using minimized version of Jquery 3.1.1
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+Author: Eric Cobb <eric.cobb2017@gmail.com>
+Date:   Sat Dec 9 13:47:42 2017 -0800
+First commit - added template keys, scripts links at bottom of HTML, added template to html and script tag
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+Author: orsadude2 <dtcomer@gmail.com>
+Date:   Sat Dec 9 13:57:28 2017 -0800
+Working on ReadMe
+
+Author: orsadude2 <dtcomer@gmail.com>
+Date:   Sat Dec 9 15:53:49 2017 -0800
+Refactored methods to arrows - Blog page displaying...author selector not working
+
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
+LINKS: https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
+LINKS: https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js
+
+Credit: The TA's for getting us unstuck on key concepts and GIT HUB; Nick for getting Eric's laptop back working (lost wifi capability) using LINUX; Amber for pointing out the small syntax errors that would keep us stuck for hours!!!!!
