@@ -11,7 +11,6 @@ function Article (rawDataObj) {
   this.publishedOn = rawDataObj.publishedOn;
 }
 
-
 Article.prototype.toHtml = function() {
   // TODONE: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
  let template = $('#blogArticles-template').html();
