@@ -12,8 +12,10 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  // TODO: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
-
+  // TODONE: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
+  const template = $('#article-template').html();
+  const renderer = Handlebars.compile(template);  
+  
   // REVIEW: If your template will use properties that aren't on the object yet, add them.
   // Since your template can't hold any JS logic, we need to execute the logic here.
   // The result is added to the object as a new property, which can then be referenced by key in the template.
@@ -30,12 +32,13 @@ Article.prototype.toHtml = function() {
   //   this.publishStatus = '(draft)';
   // }
 
-  // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
+  // TODONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
 
+  return renderer(this);
 };
 
-// COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
+// When there are 2 or more parameters being passed in you need the (), if there is only 1 argument then it can be passed in by itself without the ().
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
