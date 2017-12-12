@@ -19,12 +19,13 @@
       - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
     <script id="articles-template" type="text/x-handlebars-template">
-      <article class='newArticle' data-category='{{category}}'>
+      <article data-author="{{author}}" data-category='{{category}}'> 
       <header>
         <h1>{{title}}</h1>
       <div class="byline">
           By <address><a href="{{authorUrl}}">{{author}}</a></address>
-        published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+          {{publishStatus}}
+        <!-- published <time pubdate datetime="2000-01-01">{{publishedOn}}</time> -->
         
       </div>
     </header>
