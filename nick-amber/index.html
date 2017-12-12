@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <!--
-      done: Add a script tag to hold the Handlebars template.
+      TODONE: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
         - Insert placeholder keys.
@@ -32,7 +32,11 @@
         <a href="#" class="read-on">Read on &rarr;</a>
       </article>
     </script>
-
+    <script id="filter-template" type="text/x-handlebars-template"></script>
+      {{#each authorFilter}}
+        <option value="{{this}}">Kevin Bacon</option>
+      {{/each}}
+    </script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -88,7 +92,7 @@
     </footer>
 
     <script src="scripts/jquery-3.2.1.min.js"></script>
-    <!-- DONE: Include Handlebars.JS from a CDN -->
+    <!-- TODONE: Include Handlebars.JS from a CDN -->
     <script src="scripts/handlebars-v4.0.11.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
