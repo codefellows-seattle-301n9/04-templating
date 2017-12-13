@@ -4,8 +4,8 @@ let articleView = {};
 
 // TODONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
-// COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
+// When you see an arrow function you know that function uses the same thisObject, if you see a function() {} then that function may use several objects. If the function only uses 1 thisObject then it is safe to convert, if the function does not use a thisObject then it is a good idea to use the function() {} syntax.
 
 articleView.populateFilters = () => {
   $('article').each(function() {
