@@ -27,18 +27,19 @@ Article.prototype.toHtml = function() {
   
   // REVIEW: The ternary operator above accomplishes this same logic.
   // if(this.publishedOn) {
-  //   this.publishStatus = `published ${this.daysAgo} days ago`;
-  // } else {
-  //   this.publishStatus = '(draft)';
-  // }
-  
-  // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
-  
-  return templateRender(this);
-};
 
-// COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
-// PUT YOUR RESPONSE HERE
+    //   this.publishStatus = `published ${this.daysAgo} days ago`;
+    // } else {
+      //   this.publishStatus = '(draft)';
+      // }
+      
+      // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
+      
+      return templateRender(this);
+    };
+    
+    // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
+    // Because a and b are two different parameters rather than one.  They need to be enclosed in parentheses.
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
