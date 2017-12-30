@@ -27,6 +27,7 @@ Article.prototype.toHtml = function() {
   
   // REVIEW: The ternary operator above accomplishes this same logic.
   // if(this.publishedOn) {
+
     //   this.publishStatus = `published ${this.daysAgo} days ago`;
     // } else {
       //   this.publishStatus = '(draft)';

@@ -24,4 +24,3 @@ https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js
 
 Arthur Allen and Mitch Hall
 -->
-```
