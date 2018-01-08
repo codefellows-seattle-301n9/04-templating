@@ -7,7 +7,6 @@
   3. Next, we converted HTML template into a Handlebars template.
   4. Updated the article method to utilize the Handlebars template.
   5. Lastly, we refactored the functions and methods in our code using ES6 arrow functions.
-  6. Upload to GitHub.
 
 #### Checklist (before submitting, fill in each set of square brackets with an 'x')
 - [x] We have titled the Pull Request similar to our branch name (ex: 'brian-rick'). 
