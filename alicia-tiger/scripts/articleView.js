@@ -4,15 +4,45 @@ let articleView = {};
 
 // TODONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
-// COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
+// COMMENTED: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 //The arrow function won't know what you're referring to in the loop as it will continually pass the context down and there's no context to be passed down. It doesn't have a context, it can only take the context of it's parent. We determine if a function can be refactored by whether it has an immediate this, if not, we can use an arrow function because it has a global scope.
 
+let filterTypesObj = [{
+  type: 'author',
+  name: 'Authors'
+},
+{
+  type: 'category',
+  name: 'Categories'}
+];
+
+let filterType = [];
+
+function Filter (rawDataObject) {
+  for (let key in rawDataObject) {
+    this[key] = rawDataObject[key];
+  }
+}
+
+Filter.prototype.toHtml = function() {
+  let filterTemplate = $('#filters-template').html();
+  let filterRender = Handlebars.compile(filterTemplate);
+  return filterRender(this);
+};
+
+filterTypesObj.forEach(filterObj => {
+  filterType.push(new Filter(filterObj));
+});
+
+filterType.forEach(Filter => {
+  $('#filters').append(Filter.toHtml());
+});
+
 articleView.populateFilters = () => {
-  $('article').each(function() {
-    if (!$(this).hasClass('template')) {
+  $('article').each(function() { //getting all article arguments and looping
+    if (!$(this).hasClass('template')) { //if article instance has class template if it doesn't then do this. (referring to contextual this inside method so can't change to arrow function)
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
-
       if ($(`#author-filter option[value="${val}"]`).length === 0) {
         $('#author-filter').append(optionTag);
       }
@@ -35,7 +65,7 @@ articleView.handleAuthorFilter = () => {
       $('article').fadeIn();
       $('article.template').hide();
     }
-    $('#author-filter').val('');
+    $('#category-filter').val('');
   });
 };
 
@@ -48,7 +78,7 @@ articleView.handleCategoryFilter = () => {
       $('article').fadeIn();
       $('article.template').hide();
     }
-    $('#category-filter').val('');
+    $('#author-filter').val('');
   });
 };
 
@@ -78,7 +108,7 @@ articleView.setTeasers = () => {
   });
 };
 
-$(document).ready(() => {
+$(() => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
