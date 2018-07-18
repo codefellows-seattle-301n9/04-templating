@@ -11,6 +11,7 @@ function Article (rawDataObj) {
   this.publishedOn = rawDataObj.publishedOn;
 }
 
+
 Article.prototype.toHtml = function() {
   // TODONE: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
  let template = $('#blogArticles-template').html();
@@ -30,14 +31,13 @@ Article.prototype.toHtml = function() {
   // } else {
   //   this.publishStatus = '(draft)';
   // }
-
   // TODONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
   return templateRender(this);
   
 };
 
 // COMMENTED: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
-// PUT YOUR RESPONSE HERE: The difference is when there is no parenthesis is just calling the method but not the value of that method. Calling it with parenthesis, it is calling the value of that method. 
+// PUT YOUR RESPONSE HERE: The difference is when there is no parenthesis it is just calling the method but not the value of that method. Calling it with parenthesis, it is calling the value of that method. 
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
